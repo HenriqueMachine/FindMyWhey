@@ -9,8 +9,6 @@ import android.widget.Toast
  */
 open class BaseFragment: Fragment(), View{
 
-    private var progressDialog: ProgressDialog? = null
-
     /**
      * Método para exibir toast
      */
@@ -18,18 +16,5 @@ open class BaseFragment: Fragment(), View{
         Toast.makeText(activity,msg,duration).show()
     }
 
-//    override fun showNoConnectionDialog(onRetry: () -> Unit, onLater: (() -> Unit)?) {
-//        if (activity == null) {
-//            return
-//        }
-//
-//        val errorDialog = CustomDialogErrorRandomImage()
-//        errorDialog.show(
-//                activity!!,
-//                getString(R.string.text_tittle_ops),
-//                getString(R.string.text_no_internet_conection),
-//                onRetry,
-//                onLater)
-//    }
 
 }

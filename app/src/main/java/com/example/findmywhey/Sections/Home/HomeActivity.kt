@@ -4,6 +4,8 @@ import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.findmywhey.R
+import com.example.findmywhey.Sections.Home.Fragment.HomeFragment
+import com.example.findmywhey.Support.Base.replaceFragmentNoStack
 import com.example.findmywhey.Support.View.CustomNavigationBottom
 import kotlinx.android.synthetic.main.activity_main.*
 
@@ -17,6 +19,7 @@ class HomeActivity : AppCompatActivity(), HomeContract.UserView {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        goHome()
         setupActionBarBottom()
 
     }
@@ -44,6 +47,10 @@ class HomeActivity : AppCompatActivity(), HomeContract.UserView {
             when(it){
 
                 CustomNavigationBottom.ITEM_HOME -> {
+
+                    fl_content_home?.post {
+                        replaceFragmentNoStack(R.id.fl_content_home, HomeFragment())
+                    }
 
                     Toast.makeText(this,"HOME", Toast.LENGTH_SHORT).show()
 
@@ -86,6 +93,22 @@ class HomeActivity : AppCompatActivity(), HomeContract.UserView {
 
         }else{
             true
+        }
+
+    }
+
+    override fun onBackPressed() {
+
+        val fm = supportFragmentManager
+
+        if (fm.backStackEntryCount > 1) {
+
+            super.onBackPressed()
+
+                if (controlBootButtons()){
+                    finish()
+                }
+
         }
 
     }
