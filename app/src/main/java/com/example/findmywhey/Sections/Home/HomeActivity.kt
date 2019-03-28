@@ -1,9 +1,10 @@
-package com.example.findmywhey
+package com.example.findmywhey.Sections.Home
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import com.example.findmywhey.R
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
