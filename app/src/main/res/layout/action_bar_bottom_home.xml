@@ -60,7 +60,7 @@
         </LinearLayout>
 
         <LinearLayout
-                android:id="@+id/bt_desconto"
+                android:id="@+id/bt_historico"
                 android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="?actionBarSize"
@@ -74,7 +74,7 @@
                 android:background="@android:color/transparent">
 
             <ImageView
-                    android:id="@+id/imageview_bt_desconto"
+                    android:id="@+id/imageview_bt_historico"
                     android:layout_width="@dimen/dimenOf30dp"
                     android:layout_height="@dimen/dimenOf30dp"
                     android:padding="@dimen/dimenOf3dp"
@@ -82,7 +82,7 @@
                     android:src="@mipmap/ic_launcher"/>
 
             <TextView
-                    android:id="@+id/textview_bt_desconto"
+                    android:id="@+id/textview_bt_historico"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:visibility="gone"
@@ -95,7 +95,7 @@
 
 
         <ImageButton
-                android:id="@+id/bt_abastecer"
+                android:id="@+id/bt_carrinho"
                 android:layout_width="@dimen/dimenOf70dp"
                 android:layout_height="@dimen/dimenOf70dp"
                 android:layout_margin="@dimen/dimenOf2dp"
@@ -110,7 +110,7 @@
 
 
         <LinearLayout
-                android:id="@+id/bt_ampm"
+                android:id="@+id/bt_pesquisa"
                 android:layout_width="@dimen/dimenOf0dp"
                 android:layout_weight="1"
                 android:layout_height="?actionBarSize"
@@ -124,7 +124,7 @@
                 android:background="@android:color/transparent">
 
             <ImageView
-                    android:id="@+id/imageview_bt_ampm"
+                    android:id="@+id/imageview_bt_pesquisa"
                     android:layout_width="@dimen/dimenOf30dp"
                     android:layout_height="@dimen/dimenOf30dp"
                     android:padding="@dimen/dimenOf3dp"
@@ -132,7 +132,7 @@
                     android:src="@mipmap/ic_launcher"/>
 
             <TextView
-                    android:id="@+id/textview_bt_ampm"
+                    android:id="@+id/textview_bt_pesquisa"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:visibility="gone"

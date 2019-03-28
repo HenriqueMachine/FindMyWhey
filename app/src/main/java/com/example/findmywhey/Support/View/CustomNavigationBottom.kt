@@ -34,9 +34,9 @@ class CustomNavigationBottom: RelativeLayout {
 
     companion object {
         val ITEM_HOME = 0
-        val ITEM_DESCONTOS = 1
-        val ITEM_ABASTECER = -1
-        val ITEM_AMPM = 2
+        val ITEM_HISTORICO = 1
+        val ITEM_CARRINHO = -1
+        val ITEM_PESQUISA = 2
         val ITEM_MENU = 3
     }
 
@@ -65,19 +65,19 @@ class CustomNavigationBottom: RelativeLayout {
     private fun confViews() {
 
         bt_home = findViewById(R.id.bt_home)
-        bt_desconto = findViewById(R.id.bt_desconto)
-        bt_abastecer = findViewById(R.id.bt_abastecer)
-        bt_ampm = findViewById(R.id.bt_ampm)
+        bt_desconto = findViewById(R.id.bt_historico)
+        bt_abastecer = findViewById(R.id.bt_carrinho)
+        bt_ampm = findViewById(R.id.bt_pesquisa)
         bt_menu = findViewById(R.id.bt_menu)
 
         imageview_bt_home = findViewById(R.id.imageview_bt_home)
-        imageview_bt_desconto = findViewById(R.id.imageview_bt_desconto)
-        imageview_bt_ampm = findViewById(R.id.imageview_bt_ampm)
+        imageview_bt_desconto = findViewById(R.id.imageview_bt_historico)
+        imageview_bt_ampm = findViewById(R.id.imageview_bt_pesquisa)
         imageview_bt_menu = findViewById(R.id.imageview_bt_menu)
 
         textview_bt_home = findViewById(R.id.textview_bt_home)
-        textview_bt_desconto = findViewById(R.id.textview_bt_desconto)
-        textview_bt_ampm = findViewById(R.id.textview_bt_ampm)
+        textview_bt_desconto = findViewById(R.id.textview_bt_historico)
+        textview_bt_ampm = findViewById(R.id.textview_bt_pesquisa)
         textview_bt_menu = findViewById(R.id.textview_bt_menu)
 
         bt_home?.setOnClickListener {
@@ -94,9 +94,9 @@ class CustomNavigationBottom: RelativeLayout {
         bt_desconto?.setOnClickListener {
             if (bt_desconto?.isSelected != true) {
 
-                positioSelected = ITEM_DESCONTOS
-                setItemSelected(ITEM_DESCONTOS)
-                selectedItemPosition?.invoke(ITEM_DESCONTOS)
+                positioSelected = ITEM_HISTORICO
+                setItemSelected(ITEM_HISTORICO)
+                selectedItemPosition?.invoke(ITEM_HISTORICO)
 
             }
 
@@ -105,9 +105,9 @@ class CustomNavigationBottom: RelativeLayout {
         bt_ampm?.setOnClickListener {
             if (bt_ampm?.isSelected != true) {
 
-//                positioSelected = ITEM_AMPM
-//                setItemSelected(ITEM_AMPM)
-                selectedItemPosition?.invoke(ITEM_AMPM)
+//                positioSelected = ITEM_PESQUISA
+//                setItemSelected(ITEM_PESQUISA)
+                selectedItemPosition?.invoke(ITEM_PESQUISA)
 
             }
 
@@ -125,7 +125,7 @@ class CustomNavigationBottom: RelativeLayout {
         }
 
         bt_abastecer?.setOnClickListener {
-            selectedItemPosition?.invoke(ITEM_ABASTECER)
+            selectedItemPosition?.invoke(ITEM_CARRINHO)
         }
 
     }
@@ -141,8 +141,8 @@ class CustomNavigationBottom: RelativeLayout {
     fun performClickProsition(position:Int){
         when(position){
             ITEM_HOME -> bt_home?.performClick()
-            ITEM_DESCONTOS -> bt_desconto?.performClick()
-            ITEM_AMPM -> bt_ampm?.performClick()
+            ITEM_HISTORICO -> bt_desconto?.performClick()
+            ITEM_PESQUISA -> bt_ampm?.performClick()
             ITEM_MENU -> bt_menu?.performClick()
         }
     }
