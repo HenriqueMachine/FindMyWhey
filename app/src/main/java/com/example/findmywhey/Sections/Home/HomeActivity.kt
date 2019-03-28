@@ -2,6 +2,7 @@ package com.example.findmywhey.Sections.Home
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import com.example.findmywhey.R
 import com.example.findmywhey.Support.View.CustomNavigationBottom
 import kotlinx.android.synthetic.main.activity_main.*
@@ -15,6 +16,8 @@ class HomeActivity : AppCompatActivity(), HomeContract.UserView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        setupActionBarBottom()
 
     }
 
@@ -42,26 +45,31 @@ class HomeActivity : AppCompatActivity(), HomeContract.UserView {
 
                 CustomNavigationBottom.ITEM_HOME -> {
 
+                    Toast.makeText(this,"HOME", Toast.LENGTH_SHORT).show()
 
                 }
 
                 CustomNavigationBottom.ITEM_CARRINHO -> {
 
+                    Toast.makeText(this,"CARRINHO", Toast.LENGTH_SHORT).show()
 
                 }
 
                 CustomNavigationBottom.ITEM_HISTORICO -> {
 
+                    Toast.makeText(this,"HISTORICO", Toast.LENGTH_SHORT).show()
 
                 }
 
                 CustomNavigationBottom.ITEM_PESQUISA -> {
 
+                    Toast.makeText(this,"PESQUISA", Toast.LENGTH_SHORT).show()
 
                 }
 
                 CustomNavigationBottom.ITEM_MENU -> {
 
+                    Toast.makeText(this,"MENU", Toast.LENGTH_SHORT).show()
 
                 }
             }

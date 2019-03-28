@@ -10,24 +10,24 @@ import android.widget.*
 import com.example.findmywhey.R
 
 /**
- * Created by rafael on 10/07/18.
+ * Created by Henrique Menezes da Paixão on 27/03/19.
  */
 class CustomNavigationBottom: RelativeLayout {
 
     private var bt_home: LinearLayout? = null
     private var bt_desconto: LinearLayout? = null
     private var bt_abastecer: ImageButton? = null
-    private var bt_ampm: LinearLayout? = null
+    private var bt_pesquisa: LinearLayout? = null
     private var bt_menu: LinearLayout? = null
 
     private var imageview_bt_home: ImageView? = null
     private var imageview_bt_desconto: ImageView? = null
-    private var imageview_bt_ampm: ImageView? = null
+    private var imageview_bt_pesquisa: ImageView? = null
     private var imageview_bt_menu: ImageView? = null
 
     private var textview_bt_home: TextView? = null
     private var textview_bt_desconto: TextView? = null
-    private var textview_bt_ampm: TextView? = null
+    private var textview_bt_pesquisa: TextView? = null
     private var textview_bt_menu: TextView? = null
     private var selectedItemPosition : ((Int) -> Unit)? = null
     private var positioSelected = -1
@@ -67,17 +67,17 @@ class CustomNavigationBottom: RelativeLayout {
         bt_home = findViewById(R.id.bt_home)
         bt_desconto = findViewById(R.id.bt_historico)
         bt_abastecer = findViewById(R.id.bt_carrinho)
-        bt_ampm = findViewById(R.id.bt_pesquisa)
+        bt_pesquisa = findViewById(R.id.bt_pesquisa)
         bt_menu = findViewById(R.id.bt_menu)
 
         imageview_bt_home = findViewById(R.id.imageview_bt_home)
         imageview_bt_desconto = findViewById(R.id.imageview_bt_historico)
-        imageview_bt_ampm = findViewById(R.id.imageview_bt_pesquisa)
+        imageview_bt_pesquisa = findViewById(R.id.imageview_bt_pesquisa)
         imageview_bt_menu = findViewById(R.id.imageview_bt_menu)
 
         textview_bt_home = findViewById(R.id.textview_bt_home)
         textview_bt_desconto = findViewById(R.id.textview_bt_historico)
-        textview_bt_ampm = findViewById(R.id.textview_bt_pesquisa)
+        textview_bt_pesquisa = findViewById(R.id.textview_bt_pesquisa)
         textview_bt_menu = findViewById(R.id.textview_bt_menu)
 
         bt_home?.setOnClickListener {
@@ -102,11 +102,11 @@ class CustomNavigationBottom: RelativeLayout {
 
         }
 
-        bt_ampm?.setOnClickListener {
-            if (bt_ampm?.isSelected != true) {
+        bt_pesquisa?.setOnClickListener {
+            if (bt_pesquisa?.isSelected != true) {
 
-//                positioSelected = ITEM_PESQUISA
-//                setItemSelected(ITEM_PESQUISA)
+                positioSelected = ITEM_PESQUISA
+                setItemSelected(ITEM_PESQUISA)
                 selectedItemPosition?.invoke(ITEM_PESQUISA)
 
             }
@@ -142,7 +142,7 @@ class CustomNavigationBottom: RelativeLayout {
         when(position){
             ITEM_HOME -> bt_home?.performClick()
             ITEM_HISTORICO -> bt_desconto?.performClick()
-            ITEM_PESQUISA -> bt_ampm?.performClick()
+            ITEM_PESQUISA -> bt_pesquisa?.performClick()
             ITEM_MENU -> bt_menu?.performClick()
         }
     }
@@ -166,10 +166,10 @@ class CustomNavigationBottom: RelativeLayout {
             }
 
             2 ->{
-                if (bt_ampm?.isSelected != true) {
-                    bt_ampm?.isSelected = true
-                    imageview_bt_ampm?.isSelected = true
-                    startAnimationFadeInUp(textview_bt_ampm, 200)
+                if (bt_pesquisa?.isSelected != true) {
+                    bt_pesquisa?.isSelected = true
+                    imageview_bt_pesquisa?.isSelected = true
+                    startAnimationFadeInUp(textview_bt_pesquisa, 200)
                 }
             }
 
@@ -228,17 +228,17 @@ class CustomNavigationBottom: RelativeLayout {
 
         }
 
-        if (bt_ampm?.isSelected!! && position != 2) {
+        if (bt_pesquisa?.isSelected!! && position != 2) {
 
-            bt_ampm?.isSelected = false
-            imageview_bt_ampm?.isSelected = false
-            startAnimationFadeInUpReverse(textview_bt_ampm,200, object : Animator.AnimatorListener{
+            bt_pesquisa?.isSelected = false
+            imageview_bt_pesquisa?.isSelected = false
+            startAnimationFadeInUpReverse(textview_bt_pesquisa,200, object : Animator.AnimatorListener{
                 override fun onAnimationRepeat(animation: Animator?) {
 
                 }
 
                 override fun onAnimationEnd(animation: Animator?) {
-                    textview_bt_ampm?.visibility = View.GONE
+                    textview_bt_pesquisa?.visibility = View.GONE
                 }
 
                 override fun onAnimationCancel(animation: Animator?) {
