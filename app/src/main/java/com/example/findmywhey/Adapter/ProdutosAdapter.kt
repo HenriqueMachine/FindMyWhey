@@ -5,7 +5,7 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.findmywhey.Model.Produto
+import com.example.findmywhey.Model.ProdutoContentful
 import com.example.findmywhey.R
 import com.example.findmywhey.Support.Utils.MyViewHolder
 import kotlinx.android.synthetic.main.item_produtos.view.*
@@ -14,9 +14,10 @@ import kotlinx.android.synthetic.main.item_produtos.view.*
  * Criado por Henrique Menezes da Paixão on 30/03/2019
  */
 
-class ProdutosAdapter(var mLista: List<Produto>,
-                      var context: Context,
-                      val listern : ProdutosAdapter.ProdutoClicadoListern) : RecyclerView.Adapter<MyViewHolder>() {
+class ProdutosAdapter(
+    var mLista: ArrayList<ProdutoContentful>,
+    var context: Context,
+    val listern: ProdutoClicadoListern) : RecyclerView.Adapter<MyViewHolder>() {
 
     override fun onCreateViewHolder(p0: ViewGroup, viewType: Int): MyViewHolder {
 

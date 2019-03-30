@@ -2,6 +2,8 @@ package com.example.findmywhey.Sections.Home
 
 import android.os.Bundle
 import android.widget.Toast
+import com.example.findmywhey.Adapter.ProdutosAdapter
+import com.example.findmywhey.Model.ProdutoContentful
 import com.example.findmywhey.R
 import com.example.findmywhey.Sections.Home.Fragment.HomeFragment
 import com.example.findmywhey.Sections.Home.dataProviders.HomeDataProvider
@@ -10,7 +12,9 @@ import com.example.findmywhey.Support.Base.replaceFragmentNoStack
 import com.example.findmywhey.Support.View.CustomNavigationBottom
 import kotlinx.android.synthetic.main.activity_main.*
 
-class HomeActivity : BaseActivity(), HomeContract.UserView {
+class HomeActivity : BaseActivity(), HomeContract.UserView, ProdutosAdapter.ProdutoClicadoListern {
+
+    private var adapter : ProdutosAdapter? = null
 
     private val presenter : HomeContract.UserActionListener<HomeContract.UserView> by lazy {
         HomePresenter(context = this, view = this, dataProvider = HomeDataProvider())
@@ -22,6 +26,8 @@ class HomeActivity : BaseActivity(), HomeContract.UserView {
 
         goHome()
         setupActionBarBottom()
+
+        presenter.loadProdutos()
 
     }
 
@@ -96,6 +102,17 @@ class HomeActivity : BaseActivity(), HomeContract.UserView {
             true
         }
 
+    }
+
+    override fun produtoClicked(position: Int) {
+
+        Toast.makeText(this, "A", Toast.LENGTH_SHORT).show()
+
+    }
+
+    override fun showProdutos(list: ArrayList<ProdutoContentful>) {
+
+        adapter = ProdutosAdapter(list,context,this)
     }
 
     override fun onBackPressed() {

@@ -1,5 +1,6 @@
 package com.example.findmywhey.Sections.Home
 
+import com.example.findmywhey.Model.ProdutoContentful
 import com.example.findmywhey.Support.Base.Presenter
 import com.example.findmywhey.Support.Base.View
 
@@ -10,9 +11,13 @@ interface HomeContract {
 
     interface UserView : View {
 
+        fun showProdutos(list : ArrayList<ProdutoContentful>)
+
     }
 
     interface UserActionListener <T:View> : Presenter<T>{
+
+        fun loadProdutos()
 
     }
 
