@@ -103,8 +103,10 @@ class APIManager(val context: Context){
 
         fun buildUrlContentfull(context: Context?, params: Map<String, String>? = null):String{
 
-            val space = ""
-            val accessToken =""
+//            9527ee41f6a9fef845ac11f1752ba57a388e6d3a8e43d1a3992164370b98b8b8
+
+            val space = "bbwo17v52ycg"
+            val accessToken = "dde70bfe2ddfb372d4f070e4897624d45fe54f5ccf2034966c61ca7e9b1c5945"
             var url = "https://cdn.contentful.com/spaces/$space/entries?access_token=$accessToken"
 
             if (params != null) {

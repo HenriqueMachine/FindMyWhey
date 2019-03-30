@@ -9,14 +9,69 @@
     tools:context=".Sections.Home.Fragment.HomeFragment"
     android:padding="@dimen/dimenOf16dp">
 
+    <TextView
+        android:id="@+id/tv_texto_topo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:textColor="@color/colorWhite"
+        android:textSize="@dimen/dimenOf16sp"
+        android:textStyle="bold"
+        android:text="@string/text_produtos_mais"/>
+
     <LinearLayout
+        android:id="@+id/ll_produtos_topo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:background="@drawable/shape_rectangle_white"
+        app:layout_constraintTop_toBottomOf="@id/tv_texto_topo"
+        android:layout_marginTop="@dimen/dimenOf8dp">
 
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recycler_view_produtos_topo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/dimenOf16dp">
+
+        </android.support.v7.widget.RecyclerView>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_texto_abaixo_produtos_topo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/ll_produtos_topo"
+        android:layout_marginTop="@dimen/dimenOf16dp"
+        android:gravity="center">
+
+        <View
+            android:background="@color/colorWhite"
+            android:layout_width="@dimen/dimenOf0dp"
+            android:layout_weight="1"
+            android:layout_height="1dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="@dimen/dimenOf4dp"
+            android:layout_marginStart="@dimen/dimenOf4dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="@dimen/dimenOf16sp"
+            android:text="@string/text_outros_produtos"/>
+
+        <View
+            android:background="@color/colorWhite"
+            android:layout_width="@dimen/dimenOf0dp"
+            android:layout_weight="1"
+            android:layout_height="1dp"/>
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

@@ -11,4 +11,8 @@
     <dimen name="dimenOf2dp">2dp</dimen>
     <dimen name="dimenOf4dp">4dp</dimen>
     <dimen name="dimenOf16dp">16dp</dimen>
+    <dimen name="dimenOf16sp">16sp</dimen>
+    <dimen name="dimenOf8dp">8dp</dimen>
+	<dimen name="dimenOf125dp">125dp</dimen>
+    <dimen name="dimenOf160dp">160dp</dimen>
 </resources>

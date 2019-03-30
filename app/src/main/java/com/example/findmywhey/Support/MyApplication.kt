@@ -3,6 +3,9 @@ package com.example.findmywhey.Support
 import android.app.Activity
 import android.app.Application
 import android.os.Bundle
+import com.example.findmywhey.Domain.ContentfulDomain
+import com.example.findmywhey.Domain.ResponseDomain
+import com.example.findmywhey.Model.ProdutoContentful
 import com.example.findmywhey.Support.Manager.APIManager
 
 /**

@@ -1,18 +1,19 @@
 package com.example.findmywhey.Sections.Home
 
-import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.example.findmywhey.R
 import com.example.findmywhey.Sections.Home.Fragment.HomeFragment
+import com.example.findmywhey.Sections.Home.dataProviders.HomeDataProvider
+import com.example.findmywhey.Support.Base.BaseActivity
 import com.example.findmywhey.Support.Base.replaceFragmentNoStack
 import com.example.findmywhey.Support.View.CustomNavigationBottom
 import kotlinx.android.synthetic.main.activity_main.*
 
-class HomeActivity : AppCompatActivity(), HomeContract.UserView {
+class HomeActivity : BaseActivity(), HomeContract.UserView {
 
     private val presenter : HomeContract.UserActionListener<HomeContract.UserView> by lazy {
-        HomePresenter(context = this, view = this)
+        HomePresenter(context = this, view = this, dataProvider = HomeDataProvider())
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
