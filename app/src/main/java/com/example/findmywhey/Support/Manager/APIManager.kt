@@ -20,7 +20,7 @@ class APIManager(val context: Context){
 
     private val TAG = "APIManager"
     private var baseAPI : BaseAPI? = null
-    private var url = "AAAA"
+//    private var url = "AAAA"
 
     fun get(path:String,
             header:Map<String, String>,
@@ -31,9 +31,9 @@ class APIManager(val context: Context){
 
     }
 
-    init {
-        baseAPI = RetrofitConection(url).baseAPI
-    }
+//    init {
+//        baseAPI = RetrofitConection(url).baseAPI
+//    }
 
     private fun privateGet(path:String,
                     header:Map<String, String>,

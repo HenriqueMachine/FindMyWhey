@@ -41,14 +41,14 @@ class ContentfulDomain{
                                     val fields = items[0].asJsonObject.get("fields").asJsonObject
                                     val produto = ProdutoContentful()
 
-                                    produto.idDoProduto = fields.get("").asString
-                                    produto.nomeDoProduto = fields.get("").asString
-                                    produto.descricaoDoProduto = fields.get("").asString
-                                    produto.precoDoProduto = fields.get("").asString
-                                    produto.quantidadeEmEstoque = fields.get("").asString
-                                    produto.imagemDoProduto = fields.get("").asString
-                                    produto.fabricanteDoProduto = fields.get("").asString
-                                    produto.classificacaoDoProduto = fields.get("").asString
+                                    produto.idDoProduto = fields.get("idDoProduto").asString
+                                    produto.nomeDoProduto = fields.get("nomeDoProduto").asString
+                                    produto.descricaoDoProduto = fields.get("descricaoDoProduto").asString
+                                    produto.precoDoProduto = fields.get("precoDoProduto").asString
+                                    produto.quantidadeEmEstoque = fields.get("quantidadeEmEstoque").asString
+                                    produto.imagemDoProduto = fields.get("imagemDoProduto").asJsonObject.get("sys").asJsonObject.get("id").asString
+                                    produto.fabricanteDoProduto = fields.get("nomeFabricante").asString
+                                    produto.classificacaoDoProduto = fields.get("classificacaoDoProduto").asString
 
                                     try {
 
