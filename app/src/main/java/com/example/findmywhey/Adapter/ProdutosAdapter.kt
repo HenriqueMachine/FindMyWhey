@@ -6,6 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.findmywhey.Model.ProdutoContentful
 import com.example.findmywhey.R
+import com.example.findmywhey.Support.Base.loadFromUrl
 import com.example.findmywhey.Support.Utils.MyViewHolder
 import kotlinx.android.synthetic.main.item_produtos.view.*
 
@@ -35,6 +36,7 @@ class ProdutosAdapter(
         val item = mLista[position]
 
         holder.itemView.tv_nome_produto.text = item.nomeDoProduto
+        holder.itemView.iv_produto.loadFromUrl(item.imagemDoProduto)
         holder.itemView.cv_item_produto.setOnClickListener {
 
             listern.produtoClicked(position)

@@ -10,6 +10,8 @@ import android.util.Log
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.findmywhey.R
 import java.text.NumberFormat
 import java.util.*
@@ -176,26 +178,9 @@ fun AppCompatActivity.replaceFragmentNoStack(@IdRes layoutId: Int, fragment: and
 
 }
 
-fun Double.formatToCurrency():String{
-    val format = NumberFormat.getCurrencyInstance(Locale( "pt", "BR" ))
-    var valor = format.format(this)
-    return valor.replace("R$","R$ ")
-}
-
-fun Double.formatToKM():String{
-
-    val sb = StringBuilder()
-    val formatter = Formatter(sb, Locale( "pt", "BR" ))
-    formatter.format("%(,.0f", this)
-    return sb.toString()
-}
-
-fun View.setMarginCustom(left:Int, top:Int,right:Int,bottom:Int){
-
-            if (this.getLayoutParams() is ViewGroup.MarginLayoutParams){
-            val p = this.getLayoutParams() as ViewGroup.MarginLayoutParams
-            p.setMargins(left, top, right, bottom)
-            this.requestLayout()
-        }
-
+fun ImageView.loadFromUrl(url:String){
+    Glide.with(this)
+        .load(url)
+        .transition(DrawableTransitionOptions.withCrossFade())
+        .into(this)
 }
