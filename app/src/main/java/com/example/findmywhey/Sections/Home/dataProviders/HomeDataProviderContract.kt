@@ -7,7 +7,6 @@ import com.example.findmywhey.Model.ProdutoContentful
  */
 interface HomeDataProviderContract {
 
-
     fun loadProdutos(
         onResponse : (ArrayList<ProdutoContentful>) -> Unit,
         onError : (Throwable?) -> Unit

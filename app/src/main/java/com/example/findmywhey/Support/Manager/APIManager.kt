@@ -20,7 +20,11 @@ class APIManager(val context: Context){
 
     private val TAG = "APIManager"
     private var baseAPI : BaseAPI? = null
-//    private var url = "AAAA"
+
+
+    init {
+        baseAPI = RetrofitConection("https://cdn.contentful.com").baseAPI
+    }
 
     fun get(path:String,
             header:Map<String, String>,
@@ -31,9 +35,6 @@ class APIManager(val context: Context){
 
     }
 
-//    init {
-//        baseAPI = RetrofitConection(url).baseAPI
-//    }
 
     private fun privateGet(path:String,
                     header:Map<String, String>,

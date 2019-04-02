@@ -1,13 +1,13 @@
 package com.example.findmywhey.Support.Base
 
 import android.app.ProgressDialog
-import android.support.v4.app.Fragment
+import androidx.fragment.app.Fragment
 import android.widget.Toast
 
 /**
  * Created by Henrique Menezes da Paixão on 26/03/19.
  */
-open class BaseFragment: Fragment(), View{
+open class BaseFragment: androidx.fragment.app.Fragment(), View{
 
     /**
      * Método para exibir toast

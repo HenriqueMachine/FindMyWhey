@@ -1,7 +1,7 @@
 package com.example.findmywhey.Support.Base
 
 import android.content.Context
-import android.support.v7.app.AppCompatActivity
+import androidx.appcompat.app.AppCompatActivity
 
 /**
  * Criado por Henrique Menezes da Paixão on 27/03/2019

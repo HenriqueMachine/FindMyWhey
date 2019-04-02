@@ -52,7 +52,7 @@ class ContentfulDomain{
 
                                     try {
 
-                                        val assets = response.asJsonObject.get("includes").asJsonObject.asJsonArray
+                                        val assets = response.asJsonObject.get("includes").asJsonObject.get("Asset").asJsonArray
 
                                         assets.forEach {
 
@@ -68,7 +68,7 @@ class ContentfulDomain{
                                         }
 
                                     }catch (e:Exception){
-
+                                        e.printStackTrace()
                                     }
 
                                     list.add(produto)

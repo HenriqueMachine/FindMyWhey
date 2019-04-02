@@ -1,11 +1,11 @@
 package com.example.findmywhey.Support.Base
 
-import android.support.annotation.IdRes
-import android.support.v4.app.Fragment
-import android.support.v4.app.FragmentManager
-import android.support.v7.app.ActionBar
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.Toolbar
+import androidx.annotation.IdRes
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.appcompat.app.ActionBar
+import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import android.util.Log
 import android.view.View
 import android.view.ViewGroup
@@ -58,11 +58,11 @@ fun AppCompatActivity.setupToolbar(toolbar: Toolbar){
 /**
  * Extenção criada para facilitar a adição de Fragments em determinado container
  */
-fun AppCompatActivity.addFrament(@IdRes layoutId: Int, fragment: Fragment?){
+fun AppCompatActivity.addFrament(@IdRes layoutId: Int, fragment: androidx.fragment.app.Fragment?){
 
     try {
 
-        supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+        supportFragmentManager.popBackStack(null, androidx.fragment.app.FragmentManager.POP_BACK_STACK_INCLUSIVE)
 
         try {
             findViewById<ViewGroup>(layoutId).removeAllViews()
@@ -89,11 +89,11 @@ fun AppCompatActivity.addFrament(@IdRes layoutId: Int, fragment: Fragment?){
 /**
  * Extenção criada para facilitar a adição de Fragments em determinado container
  */
-fun AppCompatActivity.addFramentNoStack(@IdRes layoutId: Int, fragment: Fragment?){
+fun AppCompatActivity.addFramentNoStack(@IdRes layoutId: Int, fragment: androidx.fragment.app.Fragment?){
 
     try {
 
-        supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+        supportFragmentManager.popBackStack(null, androidx.fragment.app.FragmentManager.POP_BACK_STACK_INCLUSIVE)
 
         try {
             findViewById<ViewGroup>(layoutId).removeAllViews()
@@ -118,18 +118,18 @@ fun AppCompatActivity.addFramentNoStack(@IdRes layoutId: Int, fragment: Fragment
 }
 
 fun AppCompatActivity.clearStackFrament(){
-    supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+    supportFragmentManager.popBackStack(null, androidx.fragment.app.FragmentManager.POP_BACK_STACK_INCLUSIVE)
 }
 
 /**
  * Extenção criada para facilitar o replace de Fragments em determinado container
  */
-fun AppCompatActivity.replaceFragment(@IdRes layoutId: Int, fragment: Fragment, clearStack: Boolean = false){
+fun AppCompatActivity.replaceFragment(@IdRes layoutId: Int, fragment: androidx.fragment.app.Fragment, clearStack: Boolean = false){
 
     try {
 
         if (clearStack) {
-            supportFragmentManager.popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE)
+            supportFragmentManager.popBackStack(null, androidx.fragment.app.FragmentManager.POP_BACK_STACK_INCLUSIVE)
         }
 
         try {
@@ -160,7 +160,7 @@ fun AppCompatActivity.replaceFragment(@IdRes layoutId: Int, fragment: Fragment, 
 /**
  * Extenção criada para facilitar o replace de Fragments em determinado container sem pilha de fragments
  */
-fun AppCompatActivity.replaceFragmentNoStack(@IdRes layoutId: Int, fragment: Fragment){
+fun AppCompatActivity.replaceFragmentNoStack(@IdRes layoutId: Int, fragment: androidx.fragment.app.Fragment){
 
     try {
 

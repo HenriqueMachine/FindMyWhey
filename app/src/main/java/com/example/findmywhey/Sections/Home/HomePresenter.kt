@@ -10,28 +10,8 @@ import com.example.findmywhey.Sections.Home.dataProviders.HomeDataProviderContra
  */
 
 class HomePresenter(var context: Context,
-                    override var view:HomeContract.UserView?,
-                    private val dataProvider : HomeDataProviderContract) :
+                    override var view:HomeContract.UserView?) :
     HomeContract.UserActionListener<HomeContract.UserView>{
 
-    private var produtos : ArrayList<ProdutoContentful>? = null
-
-    override fun loadProdutos() {
-
-        dataProvider.loadProdutos({
-
-            if (it != null){
-
-                produtos = it
-
-                view?.showProdutos(produtos!!)
-
-            }
-
-        },{
-            //error
-        })
-
-    }
 
 }

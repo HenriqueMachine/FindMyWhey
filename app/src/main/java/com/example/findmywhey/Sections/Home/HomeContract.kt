@@ -11,13 +11,9 @@ interface HomeContract {
 
     interface UserView : View {
 
-        fun showProdutos(list : ArrayList<ProdutoContentful>)
-
     }
 
     interface UserActionListener <T:View> : Presenter<T>{
-
-        fun loadProdutos()
 
     }
 

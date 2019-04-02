@@ -1,6 +1,6 @@
 package com.example.findmywhey.Support.Utils
 
-import android.support.v7.widget.RecyclerView
+import androidx.recyclerview.widget.RecyclerView
 import android.view.View
 
-class MyViewHolder(view: View) : RecyclerView.ViewHolder(view)
+class MyViewHolder(view: View) : androidx.recyclerview.widget.RecyclerView.ViewHolder(view)
