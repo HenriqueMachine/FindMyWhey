@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.findmywhey.Adapter.ProdutosAdapter
 import com.example.findmywhey.Model.ProdutoContentful
 import com.example.findmywhey.R
@@ -56,14 +57,13 @@ class HomeFragment : BaseFragment(), HomeFragmentContract.UserView, ProdutosAdap
     override fun showProdutos(list: ArrayList<ProdutoContentful>?) {
 
         adapter = ProdutosAdapter(list!!, this.context!!,this)
+        recycler_view_produtos_topo.layoutManager = LinearLayoutManager(activity!!)
         recycler_view_produtos_topo.adapter = adapter
         adapter?.notifyDataSetChanged()
 
     }
 
     override fun produtoClicked(position: Int) {
-
-        Toast.makeText(context, "A", Toast.LENGTH_SHORT).show()
 
     }
 
