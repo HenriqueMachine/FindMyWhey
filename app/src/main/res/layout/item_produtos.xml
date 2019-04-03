@@ -20,6 +20,7 @@
 			android:id="@+id/iv_produto"
 			android:layout_width="match_parent"
 			android:layout_height="match_parent"
+            android:scaleType="fitXY"
 			/>
 
 		<View
@@ -36,7 +37,8 @@
 	android:textColor="@color/colorWhite"
 	android:text="@string/text_example_nome_produto"
 	android:elevation="@dimen/dimenOf10dp"
-	android:layout_marginBottom="@dimen/dimenOf8dp"
+    android:textStyle="bold"
+	android:layout_marginBottom="@dimen/dimenOf16dp"
 	app:layout_constraintEnd_toEndOf="@id/cv_item_produto"
 	app:layout_constraintStart_toStartOf="@id/cv_item_produto"
 	app:layout_constraintBottom_toBottomOf="@id/cv_item_produto"/>

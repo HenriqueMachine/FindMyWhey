@@ -8,10 +8,11 @@ import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.findmywhey.Adapter.ProdutosAdapter
 import com.example.findmywhey.Model.ProdutoContentful
-import com.example.findmywhey.R
 import com.example.findmywhey.Sections.Home.dataProviders.HomeDataProvider
 import com.example.findmywhey.Support.Base.BaseFragment
 import kotlinx.android.synthetic.main.fragment_home.*
+
+
 
 
 /**
@@ -38,7 +39,7 @@ class HomeFragment : BaseFragment(), HomeFragmentContract.UserView, ProdutosAdap
 
         container?.removeAllViews()
 
-        return inflater.inflate(R.layout.fragment_home, container, false)
+        return inflater.inflate(com.example.findmywhey.R.layout.fragment_home, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -57,13 +58,23 @@ class HomeFragment : BaseFragment(), HomeFragmentContract.UserView, ProdutosAdap
     override fun showProdutos(list: ArrayList<ProdutoContentful>?) {
 
         adapter = ProdutosAdapter(list!!, this.context!!,this)
-        recycler_view_produtos_topo.layoutManager = LinearLayoutManager(activity!!)
+        val horizontalLayoutManagaer = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
+        recycler_view_produtos_topo.layoutManager = horizontalLayoutManagaer
         recycler_view_produtos_topo.adapter = adapter
         adapter?.notifyDataSetChanged()
+
 
     }
 
     override fun produtoClicked(position: Int) {
+
+        presenter.loadInformation(position)
+
+    }
+
+    override fun showToast(name: String) {
+
+        Toast.makeText(context,name,Toast.LENGTH_SHORT).show()
 
     }
 

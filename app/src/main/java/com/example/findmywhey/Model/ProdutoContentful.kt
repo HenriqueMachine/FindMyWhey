@@ -1,8 +1,5 @@
 package com.example.findmywhey.Model
 
-import android.os.Parcel
-import android.os.Parcelable
-
 /**
  * Criado por Henrique Menezes da Paixão on 30/03/2019
  */

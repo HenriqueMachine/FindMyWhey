@@ -54,8 +54,6 @@ class HomeActivity : BaseActivity(), HomeContract.UserView {
                         replaceFragmentNoStack(R.id.fl_content_home, HomeFragment())
                     }
 
-                    Toast.makeText(this,"HOME", Toast.LENGTH_SHORT).show()
-
                 }
 
                 CustomNavigationBottom.ITEM_CARRINHO -> {

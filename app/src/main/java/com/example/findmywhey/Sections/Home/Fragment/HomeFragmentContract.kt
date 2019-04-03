@@ -12,12 +12,14 @@ interface HomeFragmentContract {
     interface UserView : View{
 
         fun showProdutos(list: ArrayList<ProdutoContentful>?)
+        fun showToast(name:String)
 
     }
 
     interface UserActionListener <T : View> : Presenter<T> {
 
         fun loadProdutos()
+        fun loadInformation(position:Int)
 
     }
 

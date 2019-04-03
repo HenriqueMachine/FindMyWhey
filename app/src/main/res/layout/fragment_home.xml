@@ -35,8 +35,7 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_produtos_topo"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
+            android:layout_height="190dp"
             android:padding="@dimen/dimenOf16dp">
 
         </androidx.recyclerview.widget.RecyclerView>
