@@ -55,7 +55,7 @@
                     android:textSize="@dimen/dimenOf10sp"
                     android:textColor="@color/colorPrimary"
                     android:layout_gravity="center_horizontal"
-                    android:text="AAAAAAAAAA"/>
+                    android:text="@string/text_inicio"/>
 
         </LinearLayout>
 
@@ -89,7 +89,7 @@
                     android:textSize="@dimen/dimenOf10sp"
                     android:textColor="@color/colorPrimary"
                     android:layout_gravity="center_horizontal"
-                    android:text="AAAAAAA"/>
+                    android:text="@string/text_historico"/>
 
         </LinearLayout>
 
@@ -98,20 +98,23 @@
                 android:id="@+id/bt_carrinho"
                 android:layout_width="@dimen/dimenOf70dp"
                 android:layout_height="@dimen/dimenOf70dp"
-                android:layout_margin="@dimen/dimenOf2dp"
+                android:layout_marginStart="@dimen/dimenOf2dp"
+                android:layout_marginEnd="@dimen/dimenOf2dp"
+                android:layout_marginTop="@dimen/dimenOf2dp"
+                android:layout_marginBottom="@dimen/dimenOf8dp"
                 android:clickable="true"
                 android:focusable="true"
                 android:layout_gravity="bottom"
-                android:elevation="@dimen/dimenOf4dp"
+                android:elevation="@dimen/dimenOf8dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/ic_launcher_background"
+                android:src="@drawable/ic_cart"
                 android:background="@android:color/transparent"
         />
 
 
         <LinearLayout
                 android:id="@+id/bt_pesquisa"
-                android:layout_width="@dimen/dimenOf0dp"
+                android:layout_width="0dp"
                 android:layout_weight="1"
                 android:layout_height="?actionBarSize"
                 android:layout_gravity="bottom"
@@ -125,9 +128,9 @@
 
             <ImageView
                     android:id="@+id/imageview_bt_pesquisa"
-                    android:layout_width="@dimen/dimenOf30dp"
-                    android:layout_height="@dimen/dimenOf30dp"
-                    android:padding="@dimen/dimenOf3dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="3dp"
                     android:layout_gravity="center_horizontal"
                     android:src="@mipmap/ic_launcher"/>
 
@@ -139,7 +142,7 @@
                     android:textSize="@dimen/dimenOf10sp"
                     android:textColor="@color/colorPrimary"
                     android:layout_gravity="center_horizontal"
-                    android:text="AAAAAAA"/>
+                    android:text="@string/text_pesquisa"/>
 
         </LinearLayout>
 
@@ -159,9 +162,9 @@
 
             <ImageView
                     android:id="@+id/imageview_bt_menu"
-                    android:layout_width="@dimen/dimenOf30dp"
-                    android:layout_height="@dimen/dimenOf30dp"
-                    android:padding="@dimen/dimenOf3dp"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:padding="3dp"
                     android:layout_gravity="center_horizontal"
                     android:src="@mipmap/ic_launcher"/>
 
@@ -173,7 +176,7 @@
                     android:textSize="@dimen/dimenOf10sp"
                     android:textColor="@color/colorPrimary"
                     android:layout_gravity="center_horizontal"
-                    android:text="MENU"/>
+                    android:text="@string/text_menu"/>
 
         </LinearLayout>
 

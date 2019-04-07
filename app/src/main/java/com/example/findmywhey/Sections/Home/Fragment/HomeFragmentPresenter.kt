@@ -33,7 +33,7 @@ class HomeFragmentPresenter(var context: Context?,
 
     override fun loadInformation(position: Int) {
 
-        view?.showToast(produtos?.get(position)?.idDoProduto.toString())
+        view?.openProduto(produtos?.get(position)!!)
 
     }
 

@@ -26,7 +26,7 @@ class HomeActivity : BaseActivity(), HomeContract.UserView {
 
     }
 
-    fun goHome(){
+    override fun goHome(){
         navigation_bottom?.post {
             navigation_bottom.performClickProsition(CustomNavigationBottom.ITEM_HOME)
         }
@@ -37,7 +37,7 @@ class HomeActivity : BaseActivity(), HomeContract.UserView {
 
         if (navigation_bottom.getPositionSelected() == CustomNavigationBottom.ITEM_HOME){
             navigation_bottom.post {
-                //                    presenter.clickHome()
+                presenter.clickHome()
             }
         }
     }

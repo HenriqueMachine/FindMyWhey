@@ -11,9 +11,13 @@ interface HomeContract {
 
     interface UserView : View {
 
+        fun goHome()
+
     }
 
     interface UserActionListener <T:View> : Presenter<T>{
+
+        fun clickHome()
 
     }
 

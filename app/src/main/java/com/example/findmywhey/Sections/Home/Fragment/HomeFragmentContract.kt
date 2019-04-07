@@ -12,8 +12,7 @@ interface HomeFragmentContract {
     interface UserView : View{
 
         fun showProdutos(list: ArrayList<ProdutoContentful>?)
-        fun showToast(name:String)
-
+        fun openProduto(produto : ProdutoContentful)
     }
 
     interface UserActionListener <T : View> : Presenter<T> {

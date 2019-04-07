@@ -6,4 +6,8 @@
     <string name="text_outros_produtos">Outros produtos</string>
     <string name="text_produtos_mais">Produtos mais comprados:</string>
     <string name="text_example_nome_produto">Nome do produto</string>
+    <string name="text_historico">HISTÓRICO</string>
+    <string name="text_pesquisa">PESQUISA</string>
+    <string name="text_menu">MENU</string>
+    <string name="text_inicio">ÍNICIO</string>
 </resources>

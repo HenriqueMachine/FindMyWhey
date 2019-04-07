@@ -38,7 +38,7 @@ class ContentfulDomain{
 
                                 items.forEach {
 
-                                    val fields = items[0].asJsonObject.get("fields").asJsonObject
+                                    val fields = it.asJsonObject.get("fields").asJsonObject
                                     val produto = ProdutoContentful()
 
                                     produto.idDoProduto = fields.get("idDoProduto").asString

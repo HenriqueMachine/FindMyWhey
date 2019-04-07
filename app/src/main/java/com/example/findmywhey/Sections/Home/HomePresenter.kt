@@ -12,6 +12,8 @@ import com.example.findmywhey.Sections.Home.dataProviders.HomeDataProviderContra
 class HomePresenter(var context: Context,
                     override var view:HomeContract.UserView?) :
     HomeContract.UserActionListener<HomeContract.UserView>{
-
+    override fun clickHome() {
+     view?.goHome()
+    }
 
 }
