@@ -7,12 +7,11 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.findmywhey.Adapter.ProdutosAdapter
 import com.example.findmywhey.Model.ProdutoContentful
+import com.example.findmywhey.Sections.DetailsProduct.DetailsProductActivity
 import com.example.findmywhey.Sections.Home.dataProviders.HomeDataProvider
 import com.example.findmywhey.Support.Base.BaseFragment
+import com.example.findmywhey.Support.Base.startWithDataFragment
 import kotlinx.android.synthetic.main.fragment_home.*
-
-
-
 
 /**
  * Created by Henrique Menezes da Paixão on 27/03/19.
@@ -71,7 +70,13 @@ class HomeFragment : BaseFragment(), HomeFragmentContract.UserView, ProdutosAdap
 
     override fun openProduto(produto: ProdutoContentful) {
 
+        context?.let { startWithDataFragment<DetailsProductActivity>(PRODUCT_SERIALIZED, produto, false, it) }
 
+    }
+
+    companion object {
+
+        var PRODUCT_SERIALIZED = "produtoSerializado"
 
     }
 

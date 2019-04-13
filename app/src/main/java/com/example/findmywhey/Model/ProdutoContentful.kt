@@ -1,5 +1,7 @@
 package com.example.findmywhey.Model
 
+import java.io.Serializable
+
 /**
  * Criado por Henrique Menezes da Paixão on 30/03/2019
  */
@@ -13,7 +15,7 @@ class ProdutoContentful(
         var quantidadeEmEstoque:String = "",
         var fabricanteDoProduto:String = "",
         var classificacaoDoProduto:String = ""
-) {
+) : Serializable{
 
     override fun toString(): String {
         return "Produto(idDoProduto = '$idDoProduto')," +

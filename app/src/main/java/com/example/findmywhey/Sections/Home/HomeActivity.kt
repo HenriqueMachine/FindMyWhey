@@ -58,25 +58,21 @@ class HomeActivity : BaseActivity(), HomeContract.UserView {
 
                 CustomNavigationBottom.ITEM_CARRINHO -> {
 
-                    Toast.makeText(this,"CARRINHO", Toast.LENGTH_SHORT).show()
 
                 }
 
                 CustomNavigationBottom.ITEM_HISTORICO -> {
 
-                    Toast.makeText(this,"HISTORICO", Toast.LENGTH_SHORT).show()
 
                 }
 
                 CustomNavigationBottom.ITEM_PESQUISA -> {
 
-                    Toast.makeText(this,"PESQUISA", Toast.LENGTH_SHORT).show()
 
                 }
 
                 CustomNavigationBottom.ITEM_MENU -> {
 
-                    Toast.makeText(this,"MENU", Toast.LENGTH_SHORT).show()
 
                 }
             }

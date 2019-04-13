@@ -1,7 +1,5 @@
 package com.example.findmywhey.Support.Base
 
-import android.app.ProgressDialog
-import androidx.fragment.app.Fragment
 import android.widget.Toast
 
 /**

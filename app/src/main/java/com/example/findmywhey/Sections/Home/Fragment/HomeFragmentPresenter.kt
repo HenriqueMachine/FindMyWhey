@@ -13,7 +13,6 @@ class HomeFragmentPresenter(var context: Context?,
                             private val dataProvider : HomeDataProviderContract) :
     HomeFragmentContract.UserActionListener<HomeFragmentContract.UserView>{
 
-
         private var produtos : ArrayList<ProdutoContentful>? = null
 
     override fun loadProdutos() {

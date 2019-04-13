@@ -44,7 +44,6 @@ class ProdutosAdapter(
 
     }
 
-
     interface ProdutoClicadoListern{
         fun produtoClicked(position:Int)
     }

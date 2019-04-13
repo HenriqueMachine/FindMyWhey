@@ -1,5 +1,7 @@
 package com.example.findmywhey.Support.Base
 
+import android.content.Context
+import android.content.Intent
 import androidx.annotation.IdRes
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -13,6 +15,7 @@ import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.findmywhey.R
+import java.io.Serializable
 import java.text.NumberFormat
 import java.util.*
 
@@ -177,6 +180,19 @@ fun AppCompatActivity.replaceFragmentNoStack(@IdRes layoutId: Int, fragment: and
     }
 
 }
+inline fun <reified T> AppCompatActivity.startWithData(name: String, model : Serializable, clear: Boolean = false) {
+    val intent = Intent(this, T::class.java)
+    intent.putExtra(name, model)
+    if(clear) intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+    this.startActivity(intent)
+}
+inline fun <reified T> startWithDataFragment(name: String, model : Serializable, clear: Boolean = false, context: Context) {
+    val intent = Intent(context, T::class.java)
+    intent.putExtra(name, model)
+    if(clear) intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+    context.startActivity(intent)
+}
+
 
 fun ImageView.loadFromUrl(url:String){
     Glide.with(this)
