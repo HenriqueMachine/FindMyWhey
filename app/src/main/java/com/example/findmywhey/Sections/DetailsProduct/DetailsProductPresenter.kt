@@ -2,6 +2,7 @@ package com.example.findmywhey.Sections.DetailsProduct
 
 import android.content.Context
 import com.example.findmywhey.Model.ProdutoContentful
+import com.example.findmywhey.Support.Utils.ProductList
 
 
 /**
@@ -12,12 +13,10 @@ class DetailsProductPresenter(var context: Context?,
                               override var view : DetailsProductContract.UserView?
 ) : DetailsProductContract.UserActionListener<DetailsProductContract.UserView> {
 
-    private var listMyProducts: ArrayList<ProdutoContentful>? = null
-
     override fun myList(produto: ProdutoContentful?) {
 
         if (produto != null) {
-            listMyProducts?.add(produto)
+            ProductList().myList(produto)
         }
 
     }

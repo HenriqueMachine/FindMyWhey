@@ -27,7 +27,7 @@ class DetailsProductActivity : AppCompatActivity(), DetailsProductContract.UserV
 
     }
 
-    fun init (){
+    private fun init (){
 
         configDetail()
         configComponents()

@@ -12,7 +12,6 @@ interface DetailsProductContract {
     interface UserView : View {
 
 
-
     }
 
     interface UserActionListener <T : View> : Presenter<T> {
