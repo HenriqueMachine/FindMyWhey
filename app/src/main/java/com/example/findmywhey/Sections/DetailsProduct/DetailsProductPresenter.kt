@@ -16,7 +16,7 @@ class DetailsProductPresenter(var context: Context?,
     override fun myList(produto: ProdutoContentful?) {
 
         if (produto != null) {
-            ProductList().myList(produto)
+            ProductList.myList(produto)
         }
 
     }

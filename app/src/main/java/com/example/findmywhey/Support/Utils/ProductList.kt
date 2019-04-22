@@ -1,37 +1,42 @@
 package com.example.findmywhey.Support.Utils
 
+import android.content.Context
 import com.example.findmywhey.Model.ProdutoContentful
+import com.example.findmywhey.Support.Base.SingletonHolder
 
 /**
  * Criado por Henrique Menezes da Paixão on 22/04/2019
  */
 
-class ProductList(){
+class ProductList(var context: Context){
 
-    var list : ArrayList<ProdutoContentful>? = null
+    companion object : SingletonHolder<ProductList, Context>(::ProductList) {
 
-    fun myList(produto:ProdutoContentful){
+        private var list : ArrayList<ProdutoContentful>? = ArrayList<ProdutoContentful>()
 
-        list?.add(produto)
+        fun myList(produto:ProdutoContentful){
+
+            list?.add(produto)
+
+        }
+
+        fun getProduct() : ArrayList<ProdutoContentful>? {
+
+            return list
+
+        }
+
+        fun removeProduct(produto:ProdutoContentful){
+
+            list?.remove(produto)
+
+        }
+
+        fun clearList(){
+
+            list?.clear()
+
+        }
 
     }
-
-    fun getProduct() : ArrayList<ProdutoContentful>? {
-
-        return list
-
-    }
-
-    fun removeProduct(produto:ProdutoContentful){
-
-        list?.remove(produto)
-
-    }
-
-    fun clearList(){
-
-        list?.clear()
-
-    }
-
 }
