@@ -1,6 +1,7 @@
 package com.example.findmywhey.Sections.DetailsProduct
 
 import android.content.Context
+import com.example.findmywhey.Model.ProdutoCart
 import com.example.findmywhey.Model.ProdutoContentful
 import com.example.findmywhey.Support.Utils.ProductList
 
@@ -13,10 +14,19 @@ class DetailsProductPresenter(var context: Context?,
                               override var view : DetailsProductContract.UserView?
 ) : DetailsProductContract.UserActionListener<DetailsProductContract.UserView> {
 
-    override fun myList(produto: ProdutoContentful?) {
+    private var produtoCart:ProdutoCart? = null
+
+    override fun myList(produto: ProdutoContentful?, quantidadeCompra: Int?) {
 
         if (produto != null) {
-            ProductList.myList(produto)
+
+            produtoCart?.nomeDoProduto = produto.nomeDoProduto
+            produtoCart?.idDoProduto = produto.idDoProduto
+            produtoCart?.imagemDoProduto = produto.imagemDoProduto
+            produtoCart?.precoDoProduto = produto.precoDoProduto
+            produtoCart?.quantidadeSelecionada = quantidadeCompra.toString()
+
+            produtoCart?.let { ProductList.myList(it) }
         }
 
     }

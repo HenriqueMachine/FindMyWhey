@@ -16,7 +16,7 @@ interface DetailsProductContract {
 
     interface UserActionListener <T : View> : Presenter<T> {
 
-        fun myList(produto:ProdutoContentful?)
+        fun myList(produto: ProdutoContentful?, quantidadeCompra: Int?)
 
     }
 

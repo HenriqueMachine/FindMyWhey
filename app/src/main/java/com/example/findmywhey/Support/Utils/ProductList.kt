@@ -1,7 +1,7 @@
 package com.example.findmywhey.Support.Utils
 
 import android.content.Context
-import com.example.findmywhey.Model.ProdutoContentful
+import com.example.findmywhey.Model.ProdutoCart
 import com.example.findmywhey.Support.Base.SingletonHolder
 
 /**
@@ -12,21 +12,21 @@ class ProductList(var context: Context){
 
     companion object : SingletonHolder<ProductList, Context>(::ProductList) {
 
-        private var list : ArrayList<ProdutoContentful>? = ArrayList<ProdutoContentful>()
+        private var list : ArrayList<ProdutoCart>? = ArrayList<ProdutoCart>()
 
-        fun myList(produto:ProdutoContentful){
+        fun myList(produto:ProdutoCart){
 
             list?.add(produto)
 
         }
 
-        fun getProduct() : ArrayList<ProdutoContentful>? {
+        fun getProduct() : ArrayList<ProdutoCart>? {
 
             return list
 
         }
 
-        fun removeProduct(produto:ProdutoContentful){
+        fun removeProduct(produto:ProdutoCart){
 
             list?.remove(produto)
 

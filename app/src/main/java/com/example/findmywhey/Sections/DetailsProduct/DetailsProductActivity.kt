@@ -71,7 +71,7 @@ class DetailsProductActivity : AppCompatActivity(), DetailsProductContract.UserV
         }
 
         button_comprar.setOnClickListener {
-            presenter.myList(produto)
+            presenter.myList(produto, quantidadeCompra)
         }
 
     }
